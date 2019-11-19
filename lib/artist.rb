@@ -40,11 +40,11 @@ class Artist
   end
 
   def genres
-    #genres_array = []
+    genres_array = []
     @songs.map do |song|
-      song.genre unless self.songs.include?(song.genre)
+      song.genre unless genres_array.include?(song.genre)
     end
-    #genres_array
+    genres_array
   end
 
 end
