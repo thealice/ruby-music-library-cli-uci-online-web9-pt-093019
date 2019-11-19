@@ -35,13 +35,13 @@ class Artist
 
   def add_song(song)
     song.artist = self unless song.artist
-    @songs << song unless @songs.include?(song)
+    self.songs << song unless @songs.include?(song)
     # @genres << song.genre unless @genres.include?(song)
   end
 
   def genres
     genres_array = []
-    @songs.each do |song|
+    self.songs.each do |song|
       genres_array << song.genre unless genres_array.include?(song.genre)
     end
     genres_array
