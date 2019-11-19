@@ -41,7 +41,7 @@ class Artist
 
   def genres
     genres_array = []
-    @songs.each do |song|
+    self.ongs.each do |song|
       genres_array << song.genre unless genres_array.include?(song.genre)
     end
     genres_array
