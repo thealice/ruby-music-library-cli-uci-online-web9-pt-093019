@@ -41,8 +41,8 @@ class Artist
 
   def genres
     #genres_array = []
-    @songs.map.uniq do |song|
-      song.genre #unless genres_array.include?(song.genre)
+    @songs.map do |song|
+      song.genre unless self.include?(song.genre)
     end
     #genres_array
   end
