@@ -13,3 +13,8 @@ task :console do
   puts "Console started:"
   Pry.start
 end
+
+task :generate_site do
+  MusicImporter.new("./db/mp3s").import
+  SiteGenerator.new("_site").call
+end
